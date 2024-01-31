@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Assignment 5: This webpage uses d3 techniques to display data on police killings 
+in the US throughout a two year period in a scatter plot.
+Author:       Emmanuel Simiyu (A00439371) 
+-->
+<html>
+    <head>
+        <title>Assignment 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        
+        <script src="a05.js"></script>
+    </head>
+    <body style="position: absolute; font-family: Raleway, Verdana; background-color: darkslategray">
+        <!-- Title -->
+        <div>
+            <h2 style="color: aliceblue">Fatal Police Encounters in the US</h2>
+        </div>
+        <div id = "intro" style=" width: 780px; margin-bottom: 20px; font-size: 
+             12px; background-color: bisque; border-radius: 8px; padding: 10px;">
+            <!-- Introductory paragraph -->
+            <p>
+            From Jan. 1, 2015 to Jul. 31, 2017, The Washington Post compiled a database 
+            of every fatal shooting in the US by a police officer in the line of duty.
+            The Washington Post tracked more than a dozen details about each killing
+            - including the race, age and gender of the deceased, whether the person was armed,
+            among others. This information is displayed as a scatter plot of the dates of the fatal
+            encounters against the states they occurred in. The legend is below the plot.
+            </p>
+        </div>
+        <!-- controls container -->
+        <div id="controls" style="top: 2px; left: 5px">
+            <table>
+                <!-- the dropdown lists and fieldsets structured as table columns -->
+                <tr >
+                    <td id = "arms" style="padding-right: 20px; color: gold"></td>
+                    <td id = "race" style="padding-right: 20px; color: gold"></td>
+                    <td id = "gender" style="padding-right: 15px"></td>
+                    <td id = "radioBox"></td>
+                </tr>
+            </table>
+        </div> 
+        <!-- pop up container -->
+        <div id="floater" style="position: absolute; background-color: bisque">
+        </div>
+        <!-- svg container -->
+        <svg id="chart" style="margin-top: 10px">
+        </svg>
+    </body>
+</html>
